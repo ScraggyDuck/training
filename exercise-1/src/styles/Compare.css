@@ -1,0 +1,35 @@
+.compare {
+  text-align: center;
+}
+
+.col {
+  padding: 0 !important;
+}
+
+.listHead .list-group-item {
+  background-color: #e6e4e4;
+}
+
+.listHead .list-group-item:first-child {
+  background-color: white;
+}
+
+.fresh.list-group-item {
+  background-color: #00c7ff;
+  color: white;
+  border: none;
+}
+
+.frozen.list-group-item {
+  background-color: #ff654f;
+  border: none;
+  color: white;
+}
+
+.compare .productColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2px 5px;
+  float: left;
+}

@@ -1,0 +1,50 @@
+.product:hover {
+  box-shadow: 0px 5px 10px #cccccc;
+}
+
+/* Body */
+.price {
+  color: rgba(77, 230, 220, 1);
+  font-weight: bold;
+}
+
+/* Product Image */
+
+.productImage {
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(77, 230, 220, 0.67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.isCompare {
+  background-color: rgba(77, 230, 220, 0.67);
+  opacity: 1;
+}
+
+.btnProduct {
+  background-color: transparent;
+  padding: 7px 30px;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  opacity: 0;
+}
+
+.product:hover .overlay {
+  opacity: 1;
+}
+
+.product:hover .overlay .btnProduct {
+  opacity: 1;
+}
+
+.btnProduct:focus {
+  outline: none;
+}
