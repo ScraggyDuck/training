@@ -1,0 +1,63 @@
+body {
+  background: #1e3c72;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videos-container {
+  background: #333;
+  padding: 10px;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.video-player {
+  min-height: 300px;
+  width: 100%;
+  background: #000;
+  margin-bottom: 10px;
+}
+
+.video-choices {
+  display: flex;
+
+  :not(:last-child) {
+    margin-right: 5px;
+  }
+
+  img {
+    height: 100px;
+  }
+}
+
+.video-item {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+}
+
+.video-item.active {
+  border: 5px solid white;
+  transition: all 0.3s;
+}
+
+.video-item .card-img-overlay {
+  background-color: rgba(77, 230, 220, 0.67);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.video-item:hover .card-img-overlay {
+  opacity: 1;
+}
