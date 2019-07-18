@@ -5,7 +5,7 @@ class VideoChoiceItem extends Component {
     const { video, isSelected } = this.props;
     return (
       <div
-        className={isSelected ? "video-item active col" : "video-item col"}
+        className={ "video-item col " + (isSelected ? "active" : "")}
         onClick={() => this.onClickVideo(video)}
         style={{
           backgroundImage: `url(${video.poster})`
