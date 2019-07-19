@@ -82,7 +82,7 @@ class App extends Component {
           <div
             className={`b-${index + 1} ${level}`}
             style={{
-              bottom: `${coordinatesY}px`,
+              top: `${coordinatesY}px`,
               right: `${coordinatesX}px`,
               width: `${sizeBubble}px`,
               height: `${sizeBubble}px`
