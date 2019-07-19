@@ -1,5 +1,7 @@
-.App h1 {
-  margin-left: 10px; }
+.App .header {
+  margin: 5px 50px; }
+  .App .header .score {
+    float: right; }
 
 .playground {
   width: 1440px;

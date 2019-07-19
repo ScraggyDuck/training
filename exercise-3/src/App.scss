@@ -1,7 +1,10 @@
 
 .App {
-    h1 {
-        margin-left: 10px;
+    .header {
+        .score {
+            float: right;
+        }
+        margin: 5px 50px;
     }
 }
 
