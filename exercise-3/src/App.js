@@ -99,6 +99,8 @@ class App extends Component {
   onStartTheGame = () => {
     var idOfTheGame = setInterval(() => {
       var { bubbles } = this.state;
+      //Filter the bubbles reach the bottom
+      bubbles = bubbles.filter(bubble => bubble.numOfDaysSinceLastConnected < 30);
       bubbles = bubbles.map(bubble => {
         var newRenewal = bubble.numOfDaysToRenewal <= 0 ? 360 : bubble.numOfDaysToRenewal - 1;
         var newLastConnected = bubble.numOfDaysSinceLastConnected >= 30 ? 0 : bubble.numOfDaysSinceLastConnected + 1;
@@ -124,6 +126,17 @@ class App extends Component {
     alert('Kết thúc trò chơi!');
   }
 
+  onUpdateBubble =  (event, index) => {
+    var { bubbles } = this.state;
+    bubbles[index] = {
+      ...bubbles[index],
+      numOfDaysSinceLastConnected: 0
+    };
+    this.setState({
+      bubbles: [...bubbles]
+    });
+  }
+
   onShowBubbles = bubbles => {
     var elmBubbles = null;
     if (bubbles.length > 0) {
@@ -142,12 +155,14 @@ class App extends Component {
               width: `${sizeBubble}px`,
               height: `${sizeBubble}px`
             }}
+            onClick={(event) => this.onUpdateBubble(event, index)}
           />
         )
       });
     }
     else {
       elmBubbles = <h1 className="game-over">Game Over!</h1>;
+      this.onEndTheGame();
     }
     return elmBubbles;
   }
@@ -156,7 +171,7 @@ class App extends Component {
     const { bubbles } = this.state;
     return (
       <div className="App">
-        <div className="btn btn-primary m-3" onClick={this.onResetTheGame}>Reset Game</div>
+        <div className="btn btn-primary m-1 ml-5" onClick={this.onResetTheGame}>Reset Game</div>
         <div className="playground">
           {this.onShowBubbles(bubbles)}
         </div>
