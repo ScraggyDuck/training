@@ -102,7 +102,8 @@ class App extends Component {
     clearInterval(this.state.idOfTheGame);
     this.setState({
       bubbles: [...this.state.bubblestoReset],
-      endTime: 720
+      endTime: 720,
+      score: 0
     });
     this.onStartTheGame();
   }
@@ -113,7 +114,7 @@ class App extends Component {
       //Filter the bubbles reach the bottom
       bubbles = bubbles.filter(bubble => bubble.numOfDaysSinceLastConnected < 30);
       //Filter the bubbles reach the right(heathy >= 3.5 && numOfDaysToRenewal <= 0)
-      for (var i = 0; i < bubbles.length; i++) {
+      for (let i = 0; i < bubbles.length; i++) {
         if (bubbles[i].numOfDaysToRenewal <= 0 && bubbles[i].healthy < 3.5) {
           bubbles.splice(i, 1);
         }
@@ -135,7 +136,7 @@ class App extends Component {
         }
       })
       //Score
-      for (var i = 0; i < bubbles.length; i++) {
+      for (let i = 0; i < bubbles.length; i++) {
         score += bubbles[i].healthy;
       }
       //Udate state
