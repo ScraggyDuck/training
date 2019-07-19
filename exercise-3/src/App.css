@@ -2,20 +2,18 @@
   margin-left: 10px; }
 
 .playground {
-  width: 1492px;
-  height: 292px;
+  width: 1440px;
+  height: 600px;
   background-color: #eee;
   border: 1px solid white;
-  margin: 100px auto;
+  margin: 60px auto;
   position: relative; }
-  .playground h1 {
+  .playground h1.game-over {
     text-align: center;
     color: red;
     margin-top: 120px; }
   .playground .b-1, .playground .b-2, .playground .b-3, .playground .b-4, .playground .b-5, .playground .b-6, .playground .b-7, .playground .b-8, .playground .b-9, .playground .b-10 {
     position: absolute;
-    width: 50px;
-    height: 50px;
     background-color: red;
     border-radius: 50%;
     color: white;
