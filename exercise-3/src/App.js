@@ -66,8 +66,62 @@ class App extends Component {
           amountPaid: 70,
           healthy: 8.9
         }
-      ]
+      ],
+      endTime: 720,
+      bubblestoReset: null,
+      idOfTheGame: null
     }
+  }
+
+  componentDidMount() {
+    if (this.state.bubblestoReset === null) {
+      this.setState({
+        bubblestoReset: [...this.state.bubbles]
+      });
+    }
+    this.onStartTheGame();
+  }
+
+  componentWillUpdate() {
+    if (this.state.endTime === 0)
+      this.onEndTheGame();
+  }
+
+  onResetTheGame = () => {
+    clearInterval(this.state.idOfTheGame);
+    this.setState({
+      bubbles: [...this.state.bubblestoReset],
+      endTime: 720
+    });
+    this.onStartTheGame();
+  }
+
+  onStartTheGame = () => {
+    var idOfTheGame = setInterval(() => {
+      var { bubbles } = this.state;
+      bubbles = bubbles.map(bubble => {
+        var newRenewal = bubble.numOfDaysToRenewal <= 0 ? 360 : bubble.numOfDaysToRenewal - 1;
+        var newLastConnected = bubble.numOfDaysSinceLastConnected >= 30 ? 0 : bubble.numOfDaysSinceLastConnected + 1;
+        return {
+          ...bubble,
+          numOfDaysToRenewal: newRenewal,
+          numOfDaysSinceLastConnected: newLastConnected
+        }
+      })
+      this.setState({
+        bubbles: [...bubbles],
+        endTime: this.state.endTime - 1
+      });
+    }, 1000 / 6);
+
+    this.setState({
+      idOfTheGame: idOfTheGame
+    });
+  }
+
+  onEndTheGame = () => {
+    clearInterval(this.state.idOfTheGame);
+    alert('Kết thúc trò chơi!');
   }
 
   onShowBubbles = bubbles => {
@@ -80,6 +134,7 @@ class App extends Component {
         var coordinatesY = bubble.numOfDaysSinceLastConnected * 20 - sizeBubble / 2;
         return (
           <div
+            key={index}
             className={`b-${index + 1} ${level}`}
             style={{
               top: `${coordinatesY}px`,
@@ -101,6 +156,7 @@ class App extends Component {
     const { bubbles } = this.state;
     return (
       <div className="App">
+        <div className="btn btn-primary m-3" onClick={this.onResetTheGame}>Reset Game</div>
         <div className="playground">
           {this.onShowBubbles(bubbles)}
         </div>
