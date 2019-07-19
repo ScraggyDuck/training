@@ -1,0 +1,49 @@
+
+.App {
+    h1 {
+        margin-left: 10px;
+    }
+}
+
+.playground {
+    width: 1492px;
+    height: 292px;
+    background-color: #eee;
+    border: 1px solid white;
+    margin: 100px auto;
+    position: relative;
+
+    h1 {
+        text-align: center;
+        color: red;
+        margin-top: 120px;
+    }
+  
+    %bubble {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    @for $i from 1 to 11 {
+        .b-#{$i} {
+            @extend %bubble;
+        }
+    }
+
+    .healthy-good {
+        background-color: green;
+    }
+    .healthy-medium{
+        background-color: yellow;
+    }
+    .healthy-bad {
+        background-color: red;
+    }
+}
+
