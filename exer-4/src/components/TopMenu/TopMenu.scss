@@ -1,0 +1,15 @@
+nav.top-header {
+    padding: 1.5rem;
+}
+
+nav.main-nav {
+    .navbar-nav{
+        .nav-link {
+            padding: 10px 30px;
+            &:hover {
+                background-color: rgba(239, 95, 33, 0.64);
+                color: white;
+            }
+        }
+    }
+}

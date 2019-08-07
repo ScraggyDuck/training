@@ -1,0 +1,30 @@
+// Title
+.title {
+    border-top: 3px solid;
+    width: 70%;
+    margin: auto;
+    h2 {
+        font-size: 1.5em;
+        background: white;
+        width: 70%;
+        position: relative;
+        top: -19px;
+        margin: auto;
+    }
+    
+}
+
+// Content Bottom
+.content-bottom {
+    padding: 3em 0;
+    ul{
+        padding: 0;
+        li{
+            display:inline-block;
+            border:1px solid #eee;
+            float:left;
+            border-left: none;
+            width: 16.666%;
+        }
+    }
+}

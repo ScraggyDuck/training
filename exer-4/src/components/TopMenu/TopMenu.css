@@ -1,0 +1,8 @@
+nav.top-header {
+  padding: 1.5rem; }
+
+nav.main-nav .navbar-nav .nav-link {
+  padding: 10px 30px; }
+  nav.main-nav .navbar-nav .nav-link:hover {
+    background-color: rgba(239, 95, 33, 0.64);
+    color: white; }

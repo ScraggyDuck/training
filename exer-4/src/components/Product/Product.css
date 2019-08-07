@@ -1,0 +1,27 @@
+.product .productImage {
+  position: relative; }
+  .product .productImage .overlay {
+    background-color: rgba(77, 230, 220, 0.67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s; }
+    .product .productImage .overlay .btnProduct {
+      background-color: transparent;
+      padding: 7px 30px;
+      border: 2px solid white;
+      border-radius: 4px;
+      color: white;
+      opacity: 0; }
+      .product .productImage .overlay .btnProduct:focus {
+        outline: none; }
+.product .price {
+  color: #4de6dc;
+  font-weight: bold; }
+.product:hover {
+  box-shadow: 0px 5px 10px #cccccc; }
+  .product:hover .overlay {
+    opacity: 1; }
+    .product:hover .overlay .btnProduct {
+      opacity: 1; }
