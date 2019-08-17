@@ -1,0 +1,103 @@
+.two_column_product{
+    .pagination_area{
+        margin-top: 30px;
+    }
+}
+
+.l_product_item{
+    border: 1px solid #cccccc;
+    margin-bottom: 30px;
+    .l_p_img{
+        position: relative;
+        img{
+            max-width: 100%;
+        }
+    }
+    .l_p_text{
+        text-align: center;
+        height: 80px;
+        border-top: 1px solid #cccccc;
+        overflow: hidden;
+        ul{
+            padding-top: 18px;
+            margin-bottom: 5px;
+            margin-top: -65px;
+            transition: all 300ms ease-out;
+            li{
+                display: inline-block;
+                margin-right: 8px;
+                .add_cart_btn {
+                    background: #262121;
+                    color: #fff;
+                    line-height: 38px;
+                    border: 1px solid #262121;
+                    display: inline-block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: .70px;
+                    padding: 0px 15px;
+                    -webkit-transition: all 400ms linear 0s;
+                    -o-transition: all 400ms linear 0s;
+                    transition: all 400ms linear 0s;
+                    font-family: "Poppins", sans-serif;
+                    &:hover {
+                        color: #fff;
+                        background: transparent;
+                        color: #262121;
+                    }
+                }
+                &.p_icon{
+                    vertical-align: top;
+                    a{
+                        border: 1px solid #999999;
+                        font-size: 17px;
+                        color: #999999;
+                        display: inline-block;
+                        padding: 0px 10px;
+                        line-height: 38px;
+                        position: relative;
+                        top: 1px;
+                        // @include transition;
+                        &:hover{
+                            color: #000;
+                        }
+                    }
+                }
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }    
+        h4{
+            font-size: 16px;
+            
+            font-weight: 600;
+            color: #000;
+            padding-bottom: 5px;
+            padding-top: 16px;
+            // @include transition;
+        }
+        h5{
+            font-size: 18px;
+            
+            font-weight: 600;
+            color: #d91522;
+            // @include transition;
+        }
+    }
+    &:hover{
+        .l_p_text{
+            ul{
+                margin-top: 0px;
+            }
+            h4{
+                opacity: 0;
+            }
+            h5{
+                opacity: 0;
+            }
+        }
+    }
+
+}

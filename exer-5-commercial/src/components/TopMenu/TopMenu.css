@@ -1,0 +1,13 @@
+.navbar {
+  background-color: transparent;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s;
+  border-bottom: 4px solid #ebebeb; }
+  .navbar.nav-scroll {
+    background-color: rgba(246, 246, 248, 0.9);
+    padding: 0.3em 1em; }
+  .navbar .nav-link {
+    font-size: 17px;
+    padding: 10px 20px !important; }
+    .navbar .nav-link:hover {
+      color: #ff6e6e !important; }

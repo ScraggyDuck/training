@@ -1,0 +1,130 @@
+.footer{
+  background:#141414;
+
+  .footer-class {
+    padding: 1.5em 0;
+    text-align:center;
+    background:#000;
+
+    p{
+      color:#fff;
+      font-size:1.2em;
+
+      a{
+        color:#EF5F21;
+        text-decoration:none;
+        &:hover{
+          color:#fff;
+        }
+      }
+    }
+
+  }
+  .footer-top-at {
+    padding: 4em 0;
+    .amet-sed {
+      
+      h4{
+        font-size: 1.5em;
+        color: #fff;
+        margin: 0 0 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      p{
+        color:#989696;
+        font-size: 1.2em;
+          margin: 0 0 0.3em;
+      }
+
+      ul.nav-bottom{
+        padding: 0;
+        li {
+          list-style:none;
+
+          a {
+            text-decoration:none;
+            color:#989696;
+            font-size:1.1em;
+            display: inline-block;
+            margin: 0.2em 0;
+
+            &:hover{
+              color:#EF5F21;
+            }
+          }
+        }
+      }
+
+      form {
+        padding:1em 0 0;
+      }
+
+      input[type="text"], input[type="submit"] {
+        width: 69%;
+        padding: 0.5em;
+        outline: none;
+        color: #000;
+        font-size: 1em;
+        background: #fff;
+        border: none;
+       }
+
+       input[type="submit"] {
+        width: 20%;
+        color: #FFF;
+        font-size: 1em;
+        background:#EF5F21;
+        border: none;
+        outline:none;
+        padding: 0.5em;
+
+        &:hover{
+          background: #ff0b0b70;
+        }
+      }
+
+      
+      ul.social{
+        padding:1em 0 0;
+        li {
+          display: inline-block;	
+          i{
+            background: url(../../images/img-sprite.png)no-repeat -9px -14px ;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+
+            &:hover{
+              transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              -moz-transform: rotate(360deg);
+              -o-transform: rotate(360deg);
+              -ms-transform: rotate(360deg);
+                transition: 0.5s all ease;
+              -webkit-transition: 0.5s all ease;
+              -moz-transition: 0.5s all ease;
+              -o-transition: 0.5s all ease;
+              -ms-transition: 0.5s all ease;
+            }
+          }
+
+          i.twitter{
+            background-position:  -43px -14px;
+          }
+
+          i.rss{
+            background-position: -77px -14px;
+          }
+
+          i.gmail{
+            background-position:-110px -14px;
+          }
+        }
+      }
+    }
+  }
+}

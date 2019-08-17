@@ -1,0 +1,115 @@
+/* Categories Grid Product Details Area css
+============================================================================================ */
+.c_product_grid_details{
+    .pagination_area{
+        margin-top: 60px;
+    }
+}
+.c_product_item{
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    &:last-child{
+        margin-bottom: 0px;
+    }
+    .c_product_img{
+        position: relative;
+        border: 1px solid #cccccc;
+    }
+    .c_product_text{
+        h3{
+            font-size: 16px;
+           
+            font-weight: normal;
+            color: #000;
+        }
+        h5{
+           
+            font-weight: 600;
+            color: #d91522;
+            padding: 10px 0px 20px 0px;
+        }
+        .product_rating{
+            li{
+                display: inline-block;
+                i{
+                    font-size: 15px;
+                }
+            }
+
+            li.active{
+                i{
+                    color: #efb504;
+                }
+            }
+        }
+        h6{
+            font-size: 14px;
+            
+            
+            padding-top: 5px;
+            span{
+                color: #0dda2a;
+            }
+        }
+        p{
+            line-height: 24px;
+            font-size: 14px;
+            
+            letter-spacing: .35px;
+            padding: 32px 0px;
+            color: #666666;
+        }
+        .c_product_btn{
+            li{
+                display: inline-block;
+                
+                .add_cart_btn {
+                    background: #262121;
+                    color: #fff;
+                    line-height: 38px;
+                    border: 1px solid #262121;
+                    display: inline-block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: .70px;
+                    padding: 0px 15px;
+                    -webkit-transition: all 400ms linear 0s;
+                    -o-transition: all 400ms linear 0s;
+                    transition: all 400ms linear 0s;
+                    font-family: "Poppins", sans-serif;
+                    &:hover {
+                        color: #fff;
+                        background: transparent;
+                        color: #262121;
+                    }
+                }
+                
+                &:last-child{
+                    margin-right: 0px;
+                    margin-left: 7px;
+                }
+            }    
+        }
+    }
+}
+.p_icon{
+    line-height: 40px;
+    text-align: center;
+    margin-right: 7px;
+    a{
+        font-size: 17px;
+        color: #999999; 
+        text-align: center;
+        border: 1px solid #999999;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        vertical-align: bottom;
+        &:hover{
+            color: #262121;
+            border-color: #262121;
+        }
+    }
+}

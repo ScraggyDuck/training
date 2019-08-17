@@ -1,0 +1,55 @@
+.home {
+  padding-top: 130px; }
+  .home .rsidebar ul {
+    padding: 0;
+    list-style: none; }
+  .home .rsidebar h4.cate {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.6em;
+    background: #000;
+    margin: 0; }
+  .home .rsidebar .menu {
+    width: auto;
+    height: auto;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    background: #FBFBFC; }
+    .home .rsidebar .menu .kid-menu {
+      padding: 0;
+      margin: 0;
+      display: block !important; }
+      .home .rsidebar .menu .kid-menu li {
+        list-style: none;
+        border-bottom: 1px solid #ddd; }
+        .home .rsidebar .menu .kid-menu li a {
+          border-bottom: none; }
+    .home .rsidebar .menu .title {
+      line-height: 3.5em;
+      text-indent: 1.2em;
+      font-weight: 700;
+      border-bottom: 1px solid #ddd;
+      font-size: 1.1em;
+      cursor: pointer; }
+      .home .rsidebar .menu .title a {
+        text-decoration: none;
+        color: black;
+        padding-top: 10px;
+        line-height: 35px; }
+      .home .rsidebar .menu .title:hover {
+        background: #1DBAA5; }
+    .home .rsidebar .menu ul li a {
+      width: 100%;
+      display: block;
+      position: relative;
+      font-size: 1.1em;
+      font-weight: 400;
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      font-weight: 700;
+      line-height: 3.5em;
+      text-indent: 1.2em; }
+      .home .rsidebar .menu ul li a:hover {
+        background: #1DBAA5; }
